@@ -1,0 +1,45 @@
+{
+  "name": "ts-lib",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "typescript lib starter",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "author": "qianxi0410 <liuyihan0410@gmail.com>",
+  "exports": {
+    "require": "./dist/index.cjs",
+    "import": "./dist/index.mjs"
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "test": "vitest run",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "build": "rm -rf ./dist && unbuild",
+    "prepublishOnly": "pnpm run build"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/types": "^7.17.0",
+    "@qianxi0410/eslint-config": "^2.1.2",
+    "@qianxi0410/prettier-config": "^1.0.0",
+    "@types/node": "^17.0.23",
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.1",
+    "typescript": "^4.6.3",
+    "unbuild": "^0.7.2",
+    "vitest": "^0.8.0"
+  },
+  "dependencies": {
+    "oicq": "^2.2.1"
+  }
+}

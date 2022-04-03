@@ -1,0 +1,6 @@
+{
+  "extends": ["@qianxi0410", "plugin:prettier/recommended"],
+  "rules": {
+    "no-console": "off"
+  }
+}
