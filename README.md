@@ -1,7 +1,7 @@
-### TypeScript Lib Starter
+## qianxi-bot
 
-## usage
+为了不用每次都打开教务系统进行一些操作，所以有了这个机器人的诞生。
 
-```bash
-degit qianxi0410/tls your-proj-name
-```
+我将其命名为 **qianxibot**，让它来干点dirty work，比如：
+
+- [x] 查询个人课表
