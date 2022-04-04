@@ -1,5 +1,6 @@
 import { expect, test } from "vitest";
-import { welcome } from "../src/index";
+
+const welcome = "hello world";
 
 test("welcome should be hello world", () => {
   expect(welcome).toBe("hello world");
