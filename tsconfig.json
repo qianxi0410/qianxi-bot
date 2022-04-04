@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2022",
     "module": "esnext",
-    "lib": ["ESNext"],
+    "lib": ["ESNext", "DOM"],
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
