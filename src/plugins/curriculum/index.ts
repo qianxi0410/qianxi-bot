@@ -1,15 +1,16 @@
 import { Client } from "oicq";
 import { Plugin } from "./../../type.d";
+import { config } from "./config";
 import { getCourseInfo } from "./getCourseInfo";
 
 export const curriculum: Plugin = (client: Client) => {
-  client.on("message", (message) => {
+  client.on("message.private.friend", (event) => {
     if (
-      message.message_type === "private" &&
-      ["#今日课表", "#明日课表", "#本周课表"].includes(message.raw_message)
+      event.from_id === config.owner &&
+      ["#今日课表", "#明日课表", "#本周课表"].includes(event.raw_message)
     ) {
-      getCourseInfo(message.raw_message).then((courseInfo) => {
-        message.reply(courseInfo, false);
+      getCourseInfo(event.raw_message).then((courseInfo) => {
+        event.reply(courseInfo, false);
       });
     }
   });
