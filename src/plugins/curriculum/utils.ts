@@ -14,7 +14,7 @@ export const weekly = (map: Record<string, any[]>) => {
     res += `星期${key}课表：\n`;
 
     for (const item of value) {
-      res += `${item.name}/${item.roomString}/${item.timeString}\n`;
+      res += `${item.name}/${item.roomString}/${item.timeString}\n\n`;
     }
   }
 
