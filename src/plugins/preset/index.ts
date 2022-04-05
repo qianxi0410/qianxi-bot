@@ -1,5 +1,6 @@
 import { Client, OnlineStatus } from "oicq";
 import { Plugin } from "../../type";
+import { config } from "./config";
 import { poem } from "./poem";
 
 export const info: Plugin = (client: Client) => {
@@ -9,8 +10,8 @@ export const info: Plugin = (client: Client) => {
     client.setSignature(await poem());
   });
 
-  client.on("system.offline.network", () => {
-    const f = client.pickFriend(894871277);
+  client.on("system.offline", () => {
+    const f = client.pickFriend(config.owner);
     f.sendMsg("千禧bot下线了");
   });
 };
